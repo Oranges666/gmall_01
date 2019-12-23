@@ -1,9 +1,11 @@
 package com.husay.gmall.user.controller;
 
 import com.husay.gmall.user.bean.UmsMember;
+import com.husay.gmall.user.bean.UmsMemberReceiveAddress;
 import com.husay.gmall.user.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -20,6 +22,14 @@ public class UserController {
 
     @Autowired
     IUserService userService;
+
+    @RequestMapping("getUmsMemberReceiveAddress")
+    @ResponseBody
+    public List<UmsMemberReceiveAddress> getUmsMemberReceiveAddressByMemberId( String memberId){
+
+        List<UmsMemberReceiveAddress>umsMemberReceiveAddress = userService.getUmsMemberReceiveAddressByMemberId(memberId);
+        return umsMemberReceiveAddress;
+    }
 
     @RequestMapping("getAllUser")
     @ResponseBody
