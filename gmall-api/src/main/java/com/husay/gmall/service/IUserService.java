@@ -1,7 +1,7 @@
-package com.husay.gmall.user.service;
+package com.husay.gmall.service;
 
-import com.husay.gmall.user.bean.UmsMember;
-import com.husay.gmall.user.bean.UmsMemberReceiveAddress;
+import com.husay.gmall.beans.UmsMember;
+import com.husay.gmall.beans.UmsMemberReceiveAddress;
 
 import java.util.List;
 
